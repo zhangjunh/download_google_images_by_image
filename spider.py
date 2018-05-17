@@ -7,7 +7,7 @@ import time
 import subprocess
 import shutil
 
-def spider(allpath):
+def spiders(allpath):
 
     path = os.path.join(allpath, "additive").replace('\\','/')
 
@@ -81,11 +81,11 @@ def spider(allpath):
             response.download(arguments)
             fileopen.close()
             os.remove(imagepath)
-            print("Delete imgae:", imagepath)
+            print("delete imgae:", imagepath)
             if not os.listdir(root):
                 os.rmdir(root)
-                print("Delete empty dir:", root.replace('\\','/'))
+                print("delete empty dir:", root.replace('\\','/'))
 
 
 if __name__ == '__main__':
-    spider(os.getcwd())
+    spiders(os.getcwd())

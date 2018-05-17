@@ -1,9 +1,9 @@
-from spider import spider
-from merge import merge
+from spider import spiders
+from merge import merges
 from finalmerge import finalmerges
 import os
 from delrepetition import delrepetitions
-from convert import convert
+from convert import converts
 from rename import renames
 
 allpath = os.getcwd()
@@ -13,19 +13,19 @@ retry = 1
 while retry:
     try:
         retry = 0
-        spider(allpath)
+        spiders(allpath)
 
     except:
         retry = 1
         print("START AGAIN")
 
-merge(allpath)
+merges(allpath)
 print("Merged.")
 finalmerges(allpath, database)
 print("First finalmerged.")
 delrepetitions(allpath)
 print("Deleted.")
-convert(allpath)
+converts(allpath)
 print("Converted.")
 finalmerges(allpath, database)
 print("Last finalmerged.")

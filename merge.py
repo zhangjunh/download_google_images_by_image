@@ -1,7 +1,7 @@
 import os
 import shutil
 
-def merge(allpath):
+def merges(allpath):
 
     for each_ in os.listdir(allpath):
 
@@ -28,8 +28,8 @@ def merge(allpath):
                 for each in dirs:
 
                     shutil.rmtree(os.path.join(root, each).replace('\\','/'))
-                    print("Delete dir:", os.path.join(root, each).replace('\\','/'))
+                    print("delete dir:", os.path.join(root, each).replace('\\','/'))
 
 
 if __name__ == '__main__':
-    merge(os.getcwd())
+    merges(os.getcwd())
