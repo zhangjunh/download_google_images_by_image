@@ -5,7 +5,7 @@ from google_images_download import google_images_download
 import os
 import time
 import subprocess
-import shutil
+
 
 def spiders(allpath):
 
