@@ -5,7 +5,7 @@
 - Search by google.com
 
 ## Requirements
-- python 3+
+- python 3.x
 - requests
 - google_images_download
 - re
